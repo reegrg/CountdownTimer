@@ -1,2 +1,2 @@
 # CountdownTimer
-The CountdownTimer is created by implementing  the class-based component to track a timer value. It has start Timer button which increases the timer value by 1 second and stop Timer button stops the timer value.
+This CountdownTimer uses a class-based component to handle basic timer. This timer includes three buttons: one to start the timer, which adds one second each time you click it; another to stop the timer, pausing its countdown; and a third to reset the timer back to zero.
