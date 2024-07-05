@@ -1,0 +1,117 @@
+/* CountdownTimer.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F9F1F0;
+}
+
+.timer-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #FBBA43;
+    border-radius: 12px;
+    height: 350px;
+    width: 300px;
+
+}
+
+.timer-display {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#logo {
+    height: 140px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+button {
+    padding: 10px 20px;
+    margin: 40px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.start-button {
+    background-color: #4CAF50; /* Green */
+}
+
+.start-button:disabled {
+    background-color: gray;
+}
+
+.stop-button {
+    background-color: #f44336; /* Red */
+}
+
+.stop-button:disabled {
+    background-color: gray;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+        
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F9F1F0;
+    }
+
+    .timer-container {
+        text-align: center;
+        padding: 20px;
+        background-color: #FBBA43;
+        border-radius: 12px;
+        height: 320px;
+        width: 250px;
+
+    }
+
+    .timer-display {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    #logo {
+        height: 110px;
+        width: 250px;
+        margin-bottom: 40px;
+        
+    }
+    button {
+        padding: 10px 16px;
+        margin: 20px 10px;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .start-button {
+        background-color: #4CAF50; /* Green */
+    }
+
+    .start-button:disabled {
+        background-color: gray;
+    }
+
+    .stop-button {
+        background-color: #f44336; /* Red */
+    }
+
+    .stop-button:disabled {
+        background-color: gray;
+    }
+
+}
