@@ -10,6 +10,7 @@ class CountdownTimer extends Component {
     this.state = {
       seconds: 0, //tracks the current timer value
       isRunning: false, // Indicates whether the timer is currently running
+      resetClicked: false,
     };
 
     // Variable to hold the interval ID for the timer
@@ -26,7 +27,7 @@ class CountdownTimer extends Component {
         }));
       }, 1000);
       // Update state to indicate timer is now running
-      this.setState({ isRunning: true });
+      this.setState({ isRunning: true, resetClicked: false});
     }
   };
 
@@ -35,12 +36,18 @@ class CountdownTimer extends Component {
     if (this.state.isRunning) {
         //Clear the interval to stop the timer
       clearInterval(this.intervalId);
-      this.setState({ isRunning: false });
+      this.setState({ isRunning: false, resetClicked: true });
     }
   };
 
+  //Function to reset the timer
+  resetTimer = () => {
+    clearInterval(this.intervalId);
+    this.setState({seconds: 0, isRunning: false, resetClicked: false});
+  }
+
   render() {
-    const { seconds, isRunning } = this.state;
+    const { seconds, isRunning, resetClicked } = this.state;
     return (
       <div className="timer-container">
         <div className="timer-display">
@@ -52,6 +59,9 @@ class CountdownTimer extends Component {
         </button>
         <button onClick={this.stopTimer} disabled={!isRunning} className= 'stop-button'>
           Stop Timer
+        </button>
+        <button onClick={this.resetTimer} className= 'reset-button' disabled={!resetClicked} >
+          Reset Timer
         </button>
       
       </div>
